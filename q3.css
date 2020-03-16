@@ -49,3 +49,8 @@ input{
     margin-left: 150px;
     /* padding-bottom: 250px; */
 }
+
+#list2{
+float: right;
+margin-left: 450px;
+}

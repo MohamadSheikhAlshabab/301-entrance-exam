@@ -1,4 +1,5 @@
 var today = new Date();
+var array1 = [];
 
 var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
 document.getElementById('datte').innerHTML = date;
@@ -18,11 +19,14 @@ function Data(todo, date1) {
 // array3=[];
 // array4=[];
 var newOne = new Data();
+  newOne.todo;
+ newOne.date1;
 
 function makeToDo() {
  
     newOne.todo = form1.todo.value;
     newOne.date1 = form1.date1.value;
+    array1.push(newOne.todo,newOne.date1);
 }
 
 
@@ -32,13 +36,25 @@ form1.addEventListener('submit', function doit(event) {
     // console.log("3");
     if (event.target.id) {
     // console.log("4");
-    //    var inputToDo= document.getElementById('todo');
+       var list2= document.getElementById('list2');
     //    localStorage.setItem('myData2',inputToDo );
 
-    FormData.get(todo);
+    // FormData.get(todo);
     // Data.all.push(Data);
-    makeToDo();
-    console.log(makeToDo);
+    // makeToDo();
+ 
+// var ul1 =document.createElement('ul');
+// ul1.appendChild(list2);
+//  var li1 =document.createElement('li');
+//  li1.appendChild(ul1);
+//  li1.textContent=newOne.todo;
+ console.log(newOne.todo);
+
+//  var li2 =document.createElement('li');
+//  li2.appendChild(ul1);
+//  li2.textContent=newOne.date1;
+ console.log(newOne.date1);
+ console.log(array1);
 
 
     }
@@ -46,7 +62,9 @@ form1.addEventListener('submit', function doit(event) {
 );
 makeToDo();
 
-array1 = [];
+
+
+console.log(array1);
 function setToLocal() {
     var x = JSON.stringify(array1);
     localStorage.setItem('myData', x);
@@ -54,7 +72,7 @@ function setToLocal() {
 }
 setToLocal();
 
-array2 = [];
+var     array2 = [];
 function getFromLocal() {
 
     var z = localStorage.getItem('myData');
